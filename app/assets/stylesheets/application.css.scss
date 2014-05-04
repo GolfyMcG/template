@@ -15,19 +15,12 @@
  */
 
 @import "bourbon";
-@import "vendor/bitters/bitters";
-@import "vendor/grid_settings";
 @import "neat";
 
-@import 'base/definitions';
-@import 'base/variables';
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic);
 
-@import 'base/mixins';
-@import 'base/fonts';
-@import 'base/buttons';
-@import 'base/typography';
-@import 'base/forms';
-@import 'base/layout';
+@import 'base/base';
 
 @import 'welcome/variables';
 @import 'welcome/index';
