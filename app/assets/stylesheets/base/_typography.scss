@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+  font-size: $base-font-size * 3; // 16 * 3 = 48px
 }
 
 h2 {
@@ -22,15 +22,15 @@ h2 {
 }
 
 h3 {
-  font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
-}
-
-h4 {
   font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
 }
 
-h5 {
+h4 {
   font-size: $base-font-size * 1.25; // 16 * 1.25 = 20px
+}
+
+h5 {
+  font-size: $base-font-size * 1.125; // 16 * 1.125 = 18px
 }
 
 h6 {
