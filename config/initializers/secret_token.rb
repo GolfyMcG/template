@@ -1,0 +1,1 @@
+Golfymcg::Application.config.secret_key_base = '125473b77a450a52c7fc3ab6da6aaafdb73da6a8092839a2285941eb1d317e918af360e7706bb493d923d3ae759dfee6c5f6bb8c78bb6f5ed21a55efdfa79973'
