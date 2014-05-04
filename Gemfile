@@ -4,6 +4,7 @@ ruby '2.1.1'
 gem 'rails', '4.0.0'
 
 gem 'pg'
+gem 'unicorn'
 gem 'rails_12factor', group: :production
 gem 'foreman'
 gem 'sprockets', '~> 2.10.0'
