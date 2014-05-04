@@ -15,5 +15,15 @@
  */
 
 @import "bourbon";
-@import "bitters/bitters";
+@import "vendor/bitters/bitters";
 @import "neat";
+
+@import 'base/definitions';
+@import 'base/variables';
+
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/buttons';
+@import 'base/typography';
+@import 'base/forms';
+@import 'base/layout';
