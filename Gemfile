@@ -11,7 +11,9 @@ gem 'jbuilder'
 gem 'spring',        group: :development
 
 # Assets related gems
+gem 'normalize-rails'
 gem 'bourbon'
+gem 'bitters'
 gem 'neat', '~> 1.5.1'
 gem 'sass-rails'
 gem 'uglifier'

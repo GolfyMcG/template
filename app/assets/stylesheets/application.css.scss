@@ -11,7 +11,9 @@
  * file per style scope.
  *
  *= require_self
+ *= require normalize-rails
  */
 
 @import "bourbon";
+@import "bitters/bitters";
 @import "neat";

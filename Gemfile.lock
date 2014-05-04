@@ -26,6 +26,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    bitters (0.9.3)
+      bourbon (>= 3.1)
+      sass (>= 3.2)
+      thor
     bourbon (3.2.1)
       sass (~> 3.2)
       thor
@@ -61,6 +65,7 @@ GEM
     neat (1.5.1)
       bourbon (>= 3.1)
       sass (~> 3.2.19)
+    normalize-rails (3.0.1)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -113,12 +118,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
   bourbon
   coffee-rails
   foreman
   jbuilder
   jquery-rails
   neat (~> 1.5.1)
+  normalize-rails
   rails (= 4.0.0)
   sass-rails
   spring
