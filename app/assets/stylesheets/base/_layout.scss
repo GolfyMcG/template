@@ -2,3 +2,7 @@
   @include outer-container;
   @include pad(0 1%);
 }
+
+header, footer {
+  background-color: $blue;
+}
