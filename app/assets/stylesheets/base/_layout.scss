@@ -35,6 +35,24 @@ header {
       cursor: pointer;
     }
   }
+
+  ul {
+    display: inline-block;
+    float: left;
+  }
+
+  .logo-container {
+    display: inline-table;
+    float: left;
+    height: 100%;
+    margin-right: 1em;
+
+    .logo {
+      display: table-cell;
+      font-size: 2em;
+      vertical-align: middle;
+    }
+  }
 }
 
 footer .wrapper {
