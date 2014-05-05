@@ -5,11 +5,12 @@
 
 header, footer {
   @include fill-parent();
-  background-color: $medium-gray;
+  background-color: $base-header-color;
   color: $base-header-font-color;
 }
 
 header {
+  box-shadow: 0px 1px 1px $medium-gray;
   font-size: $base-header-font-size;
   line-height: $base-header-font-size;
   height: $base-header-height;
@@ -25,7 +26,7 @@ header {
   }
 
   li {
-    @include transition(all 0.1s ease-in-out);
+    @include transition(all 0.1s linear);
     display: inline-block;
     padding: $base-header-padding;
 
@@ -41,5 +42,29 @@ footer {
 }
 
 .content {
-  padding-top: $base-header-height;
+  padding-top: $base-header-height + 2em;
+}
+
+.vc-parent {
+  display: table;
+}
+
+.vc-child {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cards {
+  @include clearfix();
+  margin: 2em 0;
+}
+
+.card {
+  @include span-columns(4);
+  @include omega(3n);
+  @include pad(1em);
+  background-color: $light-green;
+  border: 1px solid $base-border-color;
+  display: block;
+  float: left;
 }

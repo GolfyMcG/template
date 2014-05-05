@@ -1,0 +1,7 @@
+.hero {
+  @include fill-parent;
+  background-color: $light-red;
+  font-size: 2em;
+  height: 13em;
+  text-align: center;
+}
