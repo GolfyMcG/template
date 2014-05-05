@@ -8,12 +8,12 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <%= render 'shared/header' %>
+    <%= render 'shared/header' %>
 
+    <div class="wrapper content">
       <%= yield %>
-
-      <%= render 'shared/footer' %>
     </div>
+
+    <%= render 'shared/footer' %>
   </body>
 </html>

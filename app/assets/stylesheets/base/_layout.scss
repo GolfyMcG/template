@@ -4,5 +4,19 @@
 }
 
 header, footer {
-  background-color: $blue;
+  @include fill-parent();
+  background-color: $medium-gray;
+}
+
+header {
+  height: $base-header-height;
+  position: fixed;
+}
+
+footer {
+  height: $base-footer-height;
+}
+
+.content {
+  padding-top: $base-header-height;
 }
