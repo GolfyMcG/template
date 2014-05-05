@@ -6,11 +6,33 @@
 header, footer {
   @include fill-parent();
   background-color: $medium-gray;
+  color: $base-header-font-color;
 }
 
 header {
+  font-size: $base-header-font-size;
+  line-height: $base-header-font-size;
   height: $base-header-height;
   position: fixed;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  li {
+    @include transition(all 0.1s ease-in-out);
+    display: inline-block;
+    padding: $base-header-padding;
+
+    &:hover {
+      background-color: $dark-gray;
+      cursor: pointer;
+    }
+  }
 }
 
 footer {

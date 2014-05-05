@@ -16,6 +16,8 @@ $base-line-height: $base-font-size * 1.5;
 $base-border-radius: em(3);
 
 $base-header-height: 3em;
+$base-header-font-size: 1.1em;
+$base-header-padding: ($base-header-height - $base-header-font-size)/2;
 $base-footer-height: $base-header-height;
 
 // Colors
@@ -23,7 +25,7 @@ $base-footer-height: $base-header-height;
 
 $blue: #477DCA;
 $dark-gray: #333;
-$medium-gray: #999;
+$medium-gray: #666;
 $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
@@ -35,6 +37,7 @@ $base-body-color: white;
 //  Font Colors
 $base-font-color: $dark-gray;
 $base-accent-color: $blue;
+$base-header-font-color: white;
 
 //  Text Link Colors
 $base-link-color: $base-accent-color;
