@@ -20,6 +20,8 @@ $base-header-font-size: 1.1em;
 $base-header-padding: ($base-header-height - $base-header-font-size)/2;
 $base-footer-height: $base-header-height;
 
+$base-grid-padding: 0.5em 1.2em;
+
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -33,7 +35,7 @@ $light-green: #E6EFC2;
 
 // Body Color
 $base-body-color: white;
-$base-header-color: $medium-gray;
+$base-header-color: $dark-gray;
 
 //  Font Colors
 $base-font-color: $dark-gray;

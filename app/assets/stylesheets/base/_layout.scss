@@ -7,15 +7,6 @@ header, footer {
   @include fill-parent();
   background-color: $base-header-color;
   color: $base-header-font-color;
-}
-
-header {
-  box-shadow: 0px 1px 1px $medium-gray;
-  font-size: $base-header-font-size;
-  line-height: $base-header-font-size;
-  height: $base-header-height;
-  padding: 0 1.2em;
-  position: fixed;
 
   a {
     color: inherit;
@@ -24,6 +15,15 @@ header {
       color: inherit;
     }
   }
+}
+
+header {
+  box-shadow: 0px 1px 1px $medium-gray;
+  font-size: $base-header-font-size;
+  height: $base-header-height;
+  line-height: $base-header-font-size;
+  padding: 0 1.2em;
+  position: fixed;
 
   li {
     @include transition(all 0.1s linear);
@@ -31,18 +31,48 @@ header {
     padding: $base-header-padding;
 
     &:hover {
-      background-color: $dark-gray;
+      background-color: $medium-gray;
       cursor: pointer;
     }
   }
 }
 
-footer {
-  height: $base-footer-height;
+footer .wrapper {
+  @include pad(2% 1%);
+
+  ul {
+    @include span-columns(2);
+    display: block;
+    float: left;
+
+    .list-header {
+      font-weight: bold;
+    }
+
+    a {
+      color: $medium-gray;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    li {
+      @extend h6;
+    }
+  }
 }
 
 .content {
   padding-top: $base-header-height + 2em;
+}
+
+.hero {
+  @include fill-parent;
+  background-color: $light-red;
+  font-size: 2em;
+  height: 13em;
+  text-align: center;
 }
 
 .vc-parent {
@@ -63,8 +93,37 @@ footer {
   @include span-columns(4);
   @include omega(3n);
   @include pad(1em);
-  background-color: $light-green;
+  background-color: $light-yellow;
   border: 1px solid $base-border-color;
   display: block;
+  float: left;
+}
+
+.grid {
+  @include clearfix();
+  margin: 2em 0;
+}
+
+.grid-wide, .grid-narrow {
+  @include pad($base-grid-padding);
+  height: 15em;
+}
+
+.grid-wide {
+  @include span-columns(8);
+  background-color: $light-gray;
+}
+
+.grid-narrow {
+  @include span-columns(4);
+  background-color: $blue;
+}
+
+.right {
+  @include omega();
+  float: right;
+}
+
+.left {
   float: left;
 }
