@@ -41,7 +41,6 @@ header {
   height: $base-header-height;
   line-height: $base-header-font-size;
   padding: 0 1.2em;
-  position: fixed;
 
   li {
     @include transition(all 0.1s linear);
@@ -93,7 +92,7 @@ footer .wrapper {
 }
 
 .content {
-  padding-top: $base-header-height + 2em;
+  padding-top: 2em;
 }
 
 .hero {
