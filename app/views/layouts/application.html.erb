@@ -7,11 +7,13 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="<%= print_page_namespace %>">
     <%= render 'shared/header' %>
 
-    <div class="wrapper content">
-      <%= yield %>
+    <div class="content">
+      <div class="wrapper">
+        <%= yield %>
+      </div>
     </div>
 
     <%= render 'shared/footer' %>
