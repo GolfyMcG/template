@@ -2,6 +2,14 @@
   @include outer-container;
 }
 
+.content {
+  padding-top: 3.5em;
+
+  @include media($medium-screen-up) {
+    padding-top: 1em;
+  }
+}
+
 header, footer {
   @include fill-parent();
   background-color: $base-header-color;
