@@ -60,6 +60,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
+    database_cleaner (1.4.1)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -114,6 +115,8 @@ GEM
     normalize-rails (3.0.1)
     orm_adapter (0.5.0)
     pg (0.18.1)
+    prickle (0.1.0)
+      capybara
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -223,6 +226,7 @@ DEPENDENCIES
   capybara
   capybara-webkit
   coffee-rails
+  database_cleaner
   devise
   draper
   factory_girl_rails
@@ -233,6 +237,7 @@ DEPENDENCIES
   neat (~> 1.5.1)
   normalize-rails
   pg
+  prickle
   pry-rails
   rails (= 4.2.0)
   rails_12factor

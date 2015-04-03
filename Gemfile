@@ -25,6 +25,8 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'prickle'
+  gem 'database_cleaner'
 end
 
 # Assets related gems
