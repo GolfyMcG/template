@@ -11,6 +11,21 @@ gem 'sprockets', '~> 2.10.0'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'spring',        group: :development
+gem 'devise'
+gem 'simple_form'
+gem 'cancan'
+gem 'draper'
+gem 'factory_girl_rails'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+end
 
 # Assets related gems
 gem 'normalize-rails'
