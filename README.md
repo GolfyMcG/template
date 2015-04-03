@@ -2,13 +2,16 @@
 This is a template that I continue to update for getting started on a any cool new web apps I'm looking to build.
 
 ## Tech Stack
- - Managed by Bundler
+ - Back-end
   - Ruby 2.2.1
   - Rails 4.2.0
   - Unicorn
- - Manage by Heroku
   - PostgreSQL
-  - Ubuntu
+  - Ubuntu (Depends on hosting provider... but probably Heroku)
+ - Front-End
+  - Styling: SCSS
+  - JavaScript: JQuery and Underscore
+  - Framework: Bourbon with Bitter and Neat
 
 ## Getting Started
 This is a brief guide to getting this template started.
@@ -59,7 +62,7 @@ DEV_EMAIL_PASSWORD=yourPass1
 ```
 
 ### Testing
-In order to confirm that the setup is working, just run `rake`. I've overwritten the default task so that it will run basic linting and tests!
+In order to confirm that the setup is working, just run `rake`. I've overwritten the default task so that it will run all linting and tests including JSHint, Rubocop, and RSpec.
 ```
 $ rake
 ```
