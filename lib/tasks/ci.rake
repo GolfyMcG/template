@@ -2,6 +2,7 @@ namespace :ci do
   desc 'build the codebase'
   task :build do
     build_components = {
+      'JSHint (JS Style)' => 'grunt jshint',
       'Rubocop (Style Guide)' => 'rubocop',
       'Rspec (Unit Specs)' => 'rspec'
     }

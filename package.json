@@ -1,0 +1,24 @@
+{
+  "name": "Template",
+  "version": "1.0.0",
+  "description": "This is my template app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GolfyMcG/template.git"
+  },
+  "author": "Alex Villa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GolfyMcG/template/issues"
+  },
+  "homepage": "https://github.com/GolfyMcG/template",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.1",
+    "jshint-stylish": "^1.0.1"
+  }
+}
