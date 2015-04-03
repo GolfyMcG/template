@@ -1,5 +1,5 @@
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../../config/environment', __FILE__)
 require 'rubygems'
 require 'rspec/rails'
 require 'capybara/rspec'
@@ -8,7 +8,7 @@ require 'prickle/capybara'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -17,9 +17,7 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 Capybara.javascript_driver = :webkit
 
 Capybara.register_driver :webkit do |app|
-  Capybara::Webkit::Driver.new(app).tap do |driver|
-    driver.block_unknown_urls
-  end
+  Capybara::Webkit::Driver.new(app).tap(&:block_unknown_urls)
 end
 
 RSpec.configure do |config|
@@ -39,7 +37,11 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = false
   config.before(:each) do |example|
-    DatabaseCleaner.strategy = example.metadata[:js] ? :truncation : :transaction
+    DatabaseCleaner.strategy = if example.metadata[:js]
+                                 :truncation
+                               else
+                                 :transaction
+                               end
     DatabaseCleaner.start
   end
   config.after(:each) do
@@ -55,11 +57,11 @@ RSpec.configure do |config|
   # order dependency and want to debug it, you can fix the order by providing
   # the seed, which is printed after each run.
   #     --seed 1234
-  config.order = "random"
+  config.order = 'random'
 
   config.include Rails.application.routes.url_helpers
 
-  config.include(Capybara::Webkit::RspecMatchers, :type => :feature)
+  config.include(Capybara::Webkit::RspecMatchers, type: :feature)
 
   config.include(Capybara::DSL)
 

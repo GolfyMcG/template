@@ -2,7 +2,8 @@ namespace :ci do
   desc 'build the codebase'
   task :build do
     build_components = {
-      'Rspec (Unit Specs)' => 'rspec',
+      'Rubocop (Style Guide)' => 'rubocop',
+      'Rspec (Unit Specs)' => 'rspec'
     }
 
     build_components.each do |description, command|

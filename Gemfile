@@ -17,6 +17,10 @@ gem 'cancan'
 gem 'draper'
 gem 'factory_girl_rails'
 
+# Linting
+gem 'rubocop'
+gem 'rubocop-rspec'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'

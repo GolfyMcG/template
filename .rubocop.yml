@@ -1,0 +1,15 @@
+require: rubocop-rspec
+
+Style/AndOr:
+  Enabled: false
+
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+Documentation:
+  Enabled: false
