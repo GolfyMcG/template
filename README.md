@@ -66,3 +66,20 @@ In order to confirm that the setup is working, just run `rake`. I've overwritten
 ```
 $ rake
 ```
+
+## Basic App Setup
+These are some of the basic steps needed for most web applications.
+
+### Authenticating Users
+In order to generate a devise user model, start by running:
+
+```
+rails generate devise user
+rake db:migrate
+```
+
+Optionally, you can then generate the views and controllers to allow for customization. The below will generate shared views for all models, but you can also pass in the specific model you would like to customize.
+```
+rails generate devise views
+rails generate devise controllers
+```
