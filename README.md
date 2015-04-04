@@ -80,10 +80,12 @@ $ mv .env.example .env
 In particular:
 ```
 PORT=3000
+SECRET_KEY_BASE= [see below]
 DEV_EMAIL=true #set to false if you don't want email
 DEV_EMAIL_NAME=username #do not include the domain name, you just need the local part/username
 DEV_EMAIL_PASSWORD=yourPass1
 ```
+You should not commit your `secret_key_base` to version control. Use `.env` and your production environment variables to store that value.
 
 #### Database Name
 Rename the database to something unique to the app.
