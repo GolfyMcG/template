@@ -35,6 +35,32 @@ $ brew install postgresql
 $ sudo aptitude install postgresql
 ```
 
+### Application Setup
+
+#### Rename Application
+Unforuntely, I started building this prior to Rails 4.2 so we have to update the name of the application manually. Hopefully, I'll make this unncessary sometime. You can also install the [rename](https://github.com/morshedalam/rename) Gem if you wish. Start by replacing all instances of the `Template` class with the name of your app:
+
+```
+#config/application.rb:9
+module [app_name]
+
+#config/environments/production.rb:1
+#config/environments/development.rb:1
+#config/environments/test.rb:1
+[app_name]::Application.configure do
+
+#config/initializers/secret_token.rb:1
+[app_name]::Application.config.secret_key_base = "..."
+
+#config/initializers/session_store.rb:3
+Rails.application.config.session_store :cookie_store, key: '_[app_name]_session'
+
+#package.json
+#This one is a little more manual - just give it a read.
+
+#README.md
+```
+
 #### NodeJS/NPM
 NodeJS is an asynchronous event driven framework built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
 
@@ -43,8 +69,6 @@ $ ... install node from nodejs.org if not already installed ...
 $ npm install -g grunt-cli # the local node modules aren't in the $PATH, hence the global installation.
 $ npm install
 ```
-
-### Other Setup
 
 #### Foreman and `.env`
 Don't forget to copy the .env.example file to just .env and setup your development environment variables.
@@ -61,13 +85,26 @@ DEV_EMAIL_NAME=username #do not include the domain name, you just need the local
 DEV_EMAIL_PASSWORD=yourPass1
 ```
 
+#### Database Name
+Rename the database to something unique to the app.
+```yml
+#config/database.yml
+...
+default:
+  ...
+  database: [app_name]_development
+test:
+  ...
+  database: [app_name]_test
+```
+
 ### Testing
 In order to confirm that the setup is working, just run `rake`. I've overwritten the default task so that it will run all linting and tests including JSHint, Rubocop, and RSpec.
 ```
 $ rake
 ```
 
-## Basic App Setup
+## Other App Setup
 These are some of the basic steps needed for most web applications.
 
 ### Authenticating Users
