@@ -1,1 +1,1 @@
-Template::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
+Template::Application.config.secret_key_base = Rails.application.secrets.secret_key_base
