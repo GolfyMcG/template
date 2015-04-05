@@ -35,6 +35,9 @@ $ brew install postgresql
 $ sudo aptitude install postgresql
 ```
 
+#### NodeJS/NPM
+Install from [NodeJS.org](www.nodejs.org).
+
 ### Application Setup
 
 #### Rename Application
@@ -61,11 +64,8 @@ Rails.application.config.session_store :cookie_store, key: '_[app_name]_session'
 #README.md
 ```
 
-#### NodeJS/NPM
-NodeJS is an asynchronous event driven framework built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
-
+#### Grunt and `grunt-cli`
 ```
-$ ... install node from nodejs.org if not already installed ...
 $ npm install -g grunt-cli # the local node modules aren't in the $PATH, hence the global installation.
 $ npm install
 ```
