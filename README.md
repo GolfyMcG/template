@@ -38,7 +38,7 @@ $ sudo aptitude install postgresql
 ### Application Setup
 
 #### Rename Application
-Unforuntely, I started building this prior to Rails 4.2 so we have to update the name of the application manually. Hopefully, I'll make this unncessary sometime. You can also install the [rename](https://github.com/morshedalam/rename) Gem if you wish. Start by replacing all instances of the `Template` class with the name of your app:
+This app was started prior to Rails 4.2 so we have to update the name of the application manually. Hopefully, I'll make this unncessary sometime in the future. You can also install the [rename](https://github.com/morshedalam/rename) gem if you wish. Start by replacing all instances of the `Template` class with the name of your app:
 
 ```
 #config/application.rb:9
